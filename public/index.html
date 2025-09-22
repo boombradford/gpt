@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Personal Dashboard</h1>
+      <p class="subtitle">Stay current with news, weather, quotes, and your schedule.</p>
+    </header>
+
+    <main class="dashboard">
+      <section class="widget news-widget">
+        <div class="widget-header">
+          <h2>News</h2>
+          <div class="news-tabs" role="tablist" aria-label="News categories">
+            <button class="news-tab active" data-category="us" role="tab" aria-selected="true">US News</button>
+            <button class="news-tab" data-category="ai" role="tab" aria-selected="false">Artificial Intelligence</button>
+            <button class="news-tab" data-category="technology" role="tab" aria-selected="false">Technology</button>
+          </div>
+        </div>
+        <div class="widget-body" id="news-list" aria-live="polite"></div>
+      </section>
+
+      <section class="widget weather-widget">
+        <div class="widget-header">
+          <h2>Weather</h2>
+        </div>
+        <div class="widget-body" id="weather-details" aria-live="polite">
+          <p class="loading">Detecting your location…</p>
+        </div>
+      </section>
+
+      <section class="widget calendar-widget">
+        <div class="widget-header">
+          <h2>Calendar</h2>
+        </div>
+        <div class="widget-body" id="calendar-list"></div>
+      </section>
+
+      <section class="widget quote-widget">
+        <div class="widget-header">
+          <h2>Quote of the Day</h2>
+        </div>
+        <div class="widget-body" id="quote-text">
+          <p class="loading">Fetching inspiration…</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>API calls are cached for up to 12 hours to respect rate limits.</p>
+    </footer>
+
+    <script src="app.js" type="module"></script>
+  </body>
+</html>
