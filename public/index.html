@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Personal Dashboard</h1>
+      <p class="tagline">Your daily snapshot of news, weather, events, and inspiration.</p>
+    </header>
+
+    <main>
+      <section class="widget" id="news-widget">
+        <h2>Top Headlines</h2>
+        <div class="news-grid">
+          <article class="news-category" data-category="us-news">
+            <h3>US News</h3>
+            <ul class="headline-list"></ul>
+            <p class="news-message"></p>
+          </article>
+          <article class="news-category" data-category="artificial-intelligence">
+            <h3>Artificial Intelligence</h3>
+            <ul class="headline-list"></ul>
+            <p class="news-message"></p>
+          </article>
+          <article class="news-category" data-category="technology">
+            <h3>Technology</h3>
+            <ul class="headline-list"></ul>
+            <p class="news-message"></p>
+          </article>
+        </div>
+      </section>
+
+      <section class="widget" id="weather-widget">
+        <h2>Weather</h2>
+        <div class="weather-content">
+          <p class="weather-location">Loading location...</p>
+          <p class="weather-temperature"></p>
+          <p class="weather-conditions"></p>
+          <p class="weather-message"></p>
+        </div>
+      </section>
+
+      <section class="widget" id="calendar-widget">
+        <h2>Upcoming Events</h2>
+        <ul class="event-list"></ul>
+        <div class="calendar-integration">
+          <h3>Connect Your Calendar</h3>
+          <ol>
+            <li>Create a Google Cloud project and enable the Google Calendar API.</li>
+            <li>Configure OAuth credentials for a web application and download the client secrets.</li>
+            <li>Use the <code>gapi</code> JavaScript client or a backend service to authorize access.</li>
+            <li>Replace the placeholder events in <code>public/app.js</code> with real data fetched from the API.</li>
+          </ol>
+          <p class="note">See the README for detailed integration instructions.</p>
+        </div>
+      </section>
+
+      <section class="widget" id="quote-widget">
+        <h2>Quote of the Day</h2>
+        <blockquote>
+          <p class="quote-text">Fetching today's inspiration...</p>
+          <cite class="quote-author"></cite>
+        </blockquote>
+      </section>
+    </main>
+
+    <footer>
+      <p>Data is refreshed at most twice per day thanks to the 12-hour API cache.</p>
+    </footer>
+
+    <script src="app.js" defer></script>
+  </body>
+</html>
